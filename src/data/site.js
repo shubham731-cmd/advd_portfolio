@@ -3,7 +3,6 @@ import volumeImg from "../assets/volume.jpg"
 import vehicleImg from "../assets/vehicle.png"
 import aiImg from "../assets/ai_powered.png"
 import pollImg from "../assets/poll.png"
-import { summary } from "framer-motion/client"
 
 
 
