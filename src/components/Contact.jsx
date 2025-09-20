@@ -39,7 +39,7 @@ export default function Contact() {
             <input className="chip focus:outline-none" placeholder="Email" />
           </div>
           <textarea
-            className="chip w-full mt-4 h-32 focus:outline-none"
+            className="chip w-full mt-4 h-32 focus:outline-none align-top"
             placeholder="Message"
           ></textarea>
           <button className="btn-primary mt-4" type="submit">
