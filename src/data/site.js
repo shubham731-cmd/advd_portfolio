@@ -43,7 +43,7 @@ export const site = {
 
     },
     {
-      title: "CollabWrite",
+      title: "CollabWrito",
       description: "A real time collaborative text editor with CRDTs and presence indicators.",
       tags: ["React", "Socket.io", "HTML", "CSS", "Javascript", "Typescript", "Quill.js", "Firebase"],
       links: {
