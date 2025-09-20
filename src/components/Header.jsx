@@ -17,7 +17,7 @@ export default function Header() {
           <a className="hover:underline" href="#contact">Contact</a>
         </nav>
         <div className="flex items-center gap-2">
-          <a href={site.resumeUrl} target="_blank" className="btn-primary hidden sm:inline-flex">Download Resume</a>
+          <a href={site.resumeUrl} target="_blank" className="btn-primary hidden sm:inline-flex">View Resume</a>
           <ThemeToggle />
         </div>
       </div>
