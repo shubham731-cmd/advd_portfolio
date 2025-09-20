@@ -33,20 +33,28 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <form className="card" onSubmit={(e) => e.preventDefault()}>
+        <form
+          className="card"
+          onSubmit={(e) => {
+          e.preventDefault();
+          window.location.href = `mailto:shubhamkr6485@gmail.com?subject=New Message&body=Message from your portfolio site`;
+          }}
+        >
           <div className="grid sm:grid-cols-2 gap-4">
-            <input className="chip focus:outline-none" placeholder="Name" />
-            <input className="chip focus:outline-none" placeholder="Email" />
+            <input id="name" className="chip focus:outline-none" placeholder="Name" />
+            <input id="email" className="chip focus:outline-none" placeholder="Email" />
           </div>
           <textarea
-            className="chip w-full mt-4 h-32 focus:outline-none placeholder:relative placeholder:top-1/2 placeholder:-translate-y-1/2 placeholder:text-center"
+            id="message"
+            className="chip w-full mt-4 h-32 focus:outline-none"
             placeholder="Message"
           ></textarea>
 
-          <button className="btn-primary mt-4" type="submit">
-            Send (demo)
-          </button>
-        </form>
+        <button className="btn-primary mt-4" type="submit">
+          Send
+        </button>
+      </form>
+
       </div>
     </Section>
   )
