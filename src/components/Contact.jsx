@@ -39,9 +39,10 @@ export default function Contact() {
             <input className="chip focus:outline-none" placeholder="Email" />
           </div>
           <textarea
-            className="chip w-full mt-4 h-32 focus:outline-none flex items-center text-center"
+            className="chip w-full mt-4 h-32 focus:outline-none placeholder:relative placeholder:top-1/2 placeholder:-translate-y-1/2 placeholder:text-center"
             placeholder="Message"
           ></textarea>
+
           <button className="btn-primary mt-4" type="submit">
             Send (demo)
           </button>
