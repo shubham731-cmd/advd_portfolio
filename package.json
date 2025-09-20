@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
-    "vercel-build": "npx vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "vercel-build": "npx vite build"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
@@ -24,7 +23,7 @@
     "vite": "^7.1.6"
   },
   "engines": {
-  "node": "22.x"
+  "node": "20.x"
 }
 
 }
