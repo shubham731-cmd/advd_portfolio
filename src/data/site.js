@@ -1,3 +1,4 @@
+import todoImg from "../assets/todo.png"
 import collabwriteImg from "../assets/collabwrite.jpeg"
 import volumeImg from "../assets/volume.jpg"
 import vehicleImg from "../assets/vehicle.png"
@@ -30,6 +31,17 @@ export const site = {
     ]
   },
   projects: [
+    {
+      title: "To-Do Dashboard",
+      description: "A modern, full-featured dashboard application featuring authentication, role-based access control, todo management, and real-time notifications.",
+      tags: ["React","Lucide React", "Nextjs", "HTML", "Tailwind CSS", "Javascript", "Typescript", "Firebase","CRUD Operations","API"],
+      links: {
+        demo: "https://firebase-todo-dashboard.vercel.app/",
+        repo: "https://github.com/shubham731-cmd/firebase-todo-dashboard"
+      },
+      image: todoImg 
+
+    },
     {
       title: "CollabWrite",
       description: "A real time collaborative text editor with CRDTs and presence indicators.",

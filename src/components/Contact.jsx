@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from 'emailjs-com'
 import Section from './Section.jsx'
 import { site } from '../data/site.js'
 
 export default function Contact() {
+  const formRef = useRef()
+
+  // Initialize EmailJS with your public key
+  emailjs.init('A_MAUCFC1q2t8aFSS') // 👉 replace with your EmailJS Public Key
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_9p54yqn',   // 👉 replace with your EmailJS Service ID
+        'template_35gk73t',  // Use default template if no template ID
+        formRef.current
+      )
+      .then(
+        () => {
+          alert('Message sent successfully!')
+          formRef.current.reset()
+        },
+        () => {
+          alert('Failed to send message. Please try again.')
+        }
+      )
+  }
+
   return (
     <Section id="contact" eyebrow="Contact" title="Let’s talk">
       <div className="grid md:grid-cols-2 gap-6">
@@ -17,7 +43,6 @@ export default function Contact() {
             Email me
           </a>
 
-          {/* Google Map Embed */}
           <div className="mt-6 overflow-hidden rounded-xl shadow-lg">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.90089943376!2d77.46612593299311!3d12.953945614011563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1758385386539!5m2!1sen!2sin"
@@ -33,17 +58,19 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <form className="card" onSubmit={(e) => e.preventDefault()}>
+        <form ref={formRef} className="card" onSubmit={sendEmail}>
           <div className="grid sm:grid-cols-2 gap-4">
-            <input className="chip focus:outline-none" placeholder="Name" />
-            <input className="chip focus:outline-none" placeholder="Email" />
+            <input name="name" className="chip focus:outline-none" placeholder="Name" required />
+            <input name="email" type="email" className="chip focus:outline-none" placeholder="Email" required />
           </div>
           <textarea
+            name="message"
             className="chip w-full mt-4 h-32 focus:outline-none placeholder:relative placeholder:top-1/2 placeholder:-translate-y-1/2 placeholder:text-center"
             placeholder="Message"
+            required
           ></textarea>
           <button className="btn-primary mt-4" type="submit">
-            Send (demo)
+            Send
           </button>
         </form>
       </div>
