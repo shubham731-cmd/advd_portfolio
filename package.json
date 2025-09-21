@@ -4,10 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "npx vite build",
+  "vercel-build": "npx vite build",
+  "preview": "npx vite preview"
+},
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "emailjs-com": "^3.2.0",
@@ -25,5 +26,4 @@
   "engines": {
   "node": "20.x"
 }
-
 }
