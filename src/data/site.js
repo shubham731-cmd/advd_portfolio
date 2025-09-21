@@ -15,7 +15,7 @@ export const site = {
   tagline: "I build web apps that don’t just work—they flow. With React, Node.js, and a sprinkle of UX magic, I turn ideas into seamless digital experiences that feel fast, reliable, and just a little delightful.",
   location: "Bengaluru, IN",
   email: "shubhamkr6485@gmail.com",
-  resumeUrl: "https://drive.google.com/file/d/1fJ5wsWYPr2HhDWSiSW-7A89AdeBdBlhr/view?usp=drive_link", // put a link to your resume PDF
+  resumeUrl: "https://drive.google.com/file/d/1lxCpvr6L25qdy_JCA0W-Gfic1CPNesGU/view?usp=drive_link", // put a link to your resume PDF
   socials: {
     github: "https://github.com/shubham731-cmd",
     linkedin: "https://linkedin.com/in/shubhamkr6485",
